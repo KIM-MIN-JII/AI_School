@@ -1,0 +1,72 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+.transform {
+	width: 300px;
+	height: 300px;
+	background-color: yellow;
+	/*transform:  rotate(-45deg);*/
+	/*transform: scale(2, 3);*/
+}
+.transition {
+	width: 300px;
+	height: 300px;
+	background-color: gray;
+	/*transition-property: width;
+	transition-duration: 2s;
+	transition-timing-function: linear;
+	transition-delay: 1s;*/
+	transition: width 2s linear, height 2s linear;
+}
+
+.transition:hover {
+	width: 600px;
+	height: 600px;
+}
+
+.animation {
+	width: 300px;
+	height: 300px;
+	background-color: yellow; 
+	animation-name: changeWidhth;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes changeWidhth {
+	from {
+		width: 300px;
+		height: 300px;
+		background-color: yellow;
+	}
+	to {
+		width: 600px;
+		height: 600px;
+		background-color: red;
+	}
+}
+
+.spin-lion {
+	width: 150px;
+	height: 150px;
+	background-color: blueviolet;
+	/*animation-name: spinlion;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;*/
+	animation : spinlion 1.5s linear infinite alternate;
+}
+
+@keyframes spinlion {
+	from {
+		transform: rotate(-10deg);
+	}
+	to {
+		transform: rotate(10deg);
+	}
+}
