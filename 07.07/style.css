@@ -1,0 +1,275 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.mouse-animation li {
+    width: 250px;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 20px;
+    border-top: solid 5px #dfdfdf;
+    transition: opacity 0.5s, margin-left 0.5s;
+}
+
+.mouse-animation li:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-left: 10px;
+}
+
+.mouse-animation li a {
+    color: red;
+    font-size: 20px;
+}
+
+.move-box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    animation-name: moveBox;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /*paused,running*/
+    animation-play-state: running;
+    /*애니메이션 키프레임 0%에 설정된 모습으로 사용자에게 보여짐 (자주사용됨)*/
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveBox {
+    0% {
+        background-color: red;
+        /*position : relative 이기때문에 위치 지정 가능*/
+        left: 0;
+        top: 0;
+    }
+
+    25% {
+        background-color: yellow;
+        left: 500px;
+        top: 0;
+    }
+
+    50% {
+        background-color: gray;
+        left: 500px;
+        top: 500px;
+        border-radius: 50%;
+    }
+
+    75% {
+        background-color: blue;
+        left: 0;
+        top: 500px;
+    }
+
+    100% {
+        background-color: red;
+        left: 0;
+        top: 0;
+    }
+}
+
+.outer-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: solid 15px red;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 200px;
+    animation: outerBorder 2s infinite;
+}
+
+/*scale은 자식요소까지 영향 - inner-border도 크기가 달라짐*/
+@keyframes outerBorder {
+    0% {
+        border-color: red;
+        transform: scale(1);
+    }
+
+    25% {
+        border-color: yellow;
+        transform: scale(1.2);
+    }
+
+    50% {
+        border-color: blue;
+        transform: scale(1.3);
+    }
+
+    75% {
+        border-color: green;
+        transform: scale(1.2);
+    }
+
+    100% {
+        border-color: pink;
+        transform: scale(1);
+    }
+}
+
+.inner-border {
+    /*범위를 벗어나지않고(width&height)선이 안쪽으로 생성*/
+    box-sizing: border-box;
+    width: 75px;
+    height: 75px;
+    border: 5px solid purple;
+    animation: innBorder 2s infinite alternate;
+}
+
+@keyframes innBorder {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        border-color: blue;
+        border-width: 10px;
+    }
+
+    50% {
+        border-color: yellow;
+        border-width: 20px;
+    }
+
+    75% {
+        border-color: green;
+        border-width: 40px;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        border-color: gray;
+        border-width: 5px;
+    }
+}
+
+/*슈퍼마리오 동전 효과*/
+.mario-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: solid 10px black;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+.mario-coin {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-color: yellow;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius: 50%;
+    animation: jumpCoin 0.8s linear infinite;
+}
+
+.mario-box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin: 0 auto;
+    animation: jumpBox 0.5s linear infinite alternate;
+}
+
+@keyframes jumpCoin {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-100px) rotateY(180deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-100px) rotateY(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes jumpBox {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.hover-image {
+	position: relative;
+	width: 400px;
+	border: solid 10px #000;
+	overflow: hidden;
+}
+
+.hover-image img {
+	width: 100%;
+	/*단순히 x축 정렬만이 아니라 img태그가 갖고 있는 공백도 제거함*/
+	vertical-align: middle;
+	transition: transform 0.3s linear;
+	cursor: pointer;
+}
+
+.hover-image:hover img{
+	transform: scale(1.3);
+}
+
+.hover-image:hover .image-info {
+	bottom: 0;
+}
+
+.image-info {
+	/*부모영역을 기준으로 위치를 잡을 수 있다(absolute)*/
+	position: absolute;
+	box-sizing: border-box;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	width: 100%;
+	left: 0;
+	bottom: -85px;
+	transition: bottom 0.3s linear;
+}
+
+.image-info h2,
+.image-info p {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+.image-info h2 {
+	font-size: 20px;
+}
+
+.image-info p  {
+	font-size: 15px;
+}
+
+.animate__animated {
+	margin-top: 200px;
+	margin-left: 200px;
+}
