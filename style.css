@@ -1,0 +1,257 @@
+/*CSS파일을 먼저 만들고(클래스 지정) HTML에 적용하는 방식*/
+.animate__animated {
+    margin-top: 200px;
+    margin-left: 200px;
+}
+
+/*마우스오버 효과*/
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.list {
+    width: 400px;
+}
+
+.list>li {
+    width: 100%;
+    height: 100px;
+    background: gray;
+    border-top: 3px solid black;
+    text-align: center;
+    transition: margin 0.5s, background 0.5s, color 0.5s;
+}
+
+.list>li:last-child {
+    border-bottom: 3px solid black;
+}
+
+.list>li>a {
+    font-size: 20px;
+    line-height: 100px;
+    color: #000;
+}
+
+.list>li:hover {
+    background: #fff;
+    margin-left: 30px;
+}
+
+.list>li:hover>a {
+    color: blue;
+}
+
+/*move-box 애니메이션*/
+.move-box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transition: background-color 0.5s, border 0.5s;
+    animation: moeve-box 5s infinite alternate;
+}
+
+@keyframes moeve-box {
+    0% {
+        background-color: blue;
+        left: 0;
+        top: 0;
+    }
+
+    25% {
+        background-color: purple;
+        border-radius: 50%;
+        left: 500px;
+        top: 0;
+    }
+
+    50% {
+        background-color: red;
+        left: 500px;
+        top: 500px;
+        border-radius: 0%;
+    }
+
+    75% {
+        background-color: black;
+        border-radius: 50%;
+        left: 0px;
+        top: 500px;
+    }
+
+    100% {
+        background-color: blue;
+        left: 0;
+        top: 0;
+    }
+}
+
+/*슈퍼마리오 동전 애니메이션*/
+.mario-container {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    border: 8px solid #000;
+    margin: 0 auto;
+    top: 200px;
+    overflow: hidden;
+}
+
+.mario-coin {
+    position: absolute;
+    left: 50%;
+    top: 230px;
+    margin: 0 auto;
+    margin-left: -40px;
+    width: 80px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: yellow;
+    animation: mario-coin 0.5s infinite;
+}
+
+.mario-box {
+    position: absolute;
+    left: 50%;
+    top: 240px;
+    margin: 0 auto;
+    margin-left: -90px;
+    width: 180px;
+    height: 180px;
+    background-color: darkred;
+    animation: mario-box 0.5s infinite alternate;
+}
+
+@keyframes mario-coin {
+    0% {}
+
+    50% {
+        transform: rotateY(180deg) translateY(-150px);
+    }
+
+    100% {
+        transform: rotateY(360deg) translateY(-240px);
+        opacity: 0%;
+    }
+}
+
+@keyframes mario-box {
+    0% {}
+
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+/*마우스오버 애니메이션 효과 복습*/
+.tbt-box {
+    position: relative;
+    top: 140px;
+    margin: 0 auto;
+    width: 490px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.tbt-box>h3 {
+    font-size: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.tbt-img1 {
+    width: 490px;
+    height: 320px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.tbt-img1>img {
+    transition: transform 0.5s;
+}
+
+.tbt-img1>img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.tbt-img2 {
+    display: flex;
+    justify-content: space-between;
+    width: 490px;
+}
+
+.tbt-img2>div {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.tbt-img2>div>img {
+    width: 100%;
+}
+
+.tbt-img2>div>img:hover {
+    cursor: pointer;
+}
+
+.tbt>span {
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    background-color: rgb(255, 49, 49);
+    transition: all 0.3s;
+}
+
+.tbt-img2>div:hover>span {
+    right: -100px;
+    top: -100px;
+}
+
+.tbt>span>p{ 
+    position: absolute;
+    left: 17px;
+    bottom: -6px;
+    color: #fff;
+    font-size: 10px;
+}
+
+.desc {
+    position: absolute;
+    left: 0;
+    bottom: -70px;
+    width: 150px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+    transition: bottom 0.3s;
+}
+
+.desc>h4 {
+    font-size: 11.5px;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+
+.desc>p {
+    font-size: 10.5px;
+}
+
+.tbt-img2>div:hover>.desc {
+    bottom: 0;
+}
