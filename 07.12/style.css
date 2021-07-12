@@ -1,0 +1,77 @@
+html,
+body,
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/*bootstrap agency*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1140px;
+    margin: 0 auto;
+    background-color: pink;
+}
+
+
+.column {
+    width: 350px;
+    background-color: #fff;
+    border: 2px solid red;
+    margin-bottom: 10px;
+}
+
+.column:nth-child(4),
+.column:nth-child(5),
+.column:nth-child(6) {
+    margin-bottom: 0;
+}
+
+.column img {
+    /*column안에서 꽉채우게*/
+    width: 100%;
+    /*공백 없애기*/
+    vertical-align: middle;
+}
+
+.image-info {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.image-info h2 {
+    margin: 0;
+}
+
+@media (min-width: 540px) and (max-width: 720px) {
+    .container {
+        width: 720px;
+    }
+
+    .column:nth-child(4) {
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 539px) {
+    .container {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .column:nth-child(4) {
+        margin-bottom: 10px;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .column:nth-child(4),
+    .column:nth-child(5) {
+        margin-bottom: 10px;
+    }
+}
