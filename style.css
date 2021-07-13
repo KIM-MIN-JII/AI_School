@@ -1,0 +1,319 @@
+/*Default CSS*/
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+/*float과 함께 오는 css작업*/
+.clearfix {
+    clear: both;
+}
+
+/* Intro */
+#intro {
+	width: 100%;
+	height: 1600px;
+	/*../< 폴더 바깥으로 나온다는 뜻*/
+	background-image: url(img/intro/intro_bg.png); 
+}
+
+#intro .introWrap {
+	/*포지션을 어떤것을 써야하는 것에 대한 당위성 있어야함*/
+	/*위치를 조정하는 3차원적인 특징을 써야하기 때문에 relative(2,3차원)*/
+	/*부모-relative,자식-absolute를 사용했다면 자식의 위치기준은 부모가 된다*/
+	position: relative;
+	width: 760px;
+	height: 516px; 
+	left: 50%;
+	margin-left: -380px;
+	/*intro의 위치를 아래로 내려야할 때(후수정)*/
+	/*1.margin-top은 마진병합현상이 일어남 (X)*/
+	/*2.padding-top은 아래에 미리 만들어 놓은 레이아웃이 틀어질 수 있음
+	  (의도하지않은 공백이 추가 됨)(X)*/
+	top: 100px;
+	/*relative이기때문에 자기 자신이 주체가 되어서 이동한다(top,left,right,bottom)*/
+	/*아래에 어떠한 요소가 배치해 있더라도 영향주지않고 이동(겹치는 상태)*/
+	/*레이아웃 틀어지지 않는다.*/
+	/*둘다 3차원일 경우 나중에 작성된 z축이 더 높다*/
+}
+
+#intro .introWrap .logo {
+	/*동물 이미지 > 레이어 필요함 > 3차원*/
+	position: absolute;
+	width: 760px;
+	height: 516px;
+	background-image: url(img/intro/logo.png);
+	z-index: 100;
+}
+
+#intro .introWrap .lion {
+	position: absolute;
+	/*이미지의 공간자체를 백그라운드 이미지와 동일하게 크기 설정*/
+	width: 161px;
+	height: 161px;
+	background-image: url(img/intro/lion.png);
+	margin: 80px 0 0 30px;
+	z-index: 0;
+}
+
+#intro .introWrap .rabbit {
+	position: absolute;
+	width: 105px;
+	height: 129px;
+	background-image: url(img/intro/rabbit.png);
+	margin: 90px 0 0 580px; 
+}
+
+#intro .introWrap .bear {
+	position: absolute;
+	width: 112px;
+	height: 105px;
+	background-image: url(img/intro/bear.png);
+	margin: 310px 0 0 560px; 
+	z-index: 200;
+}
+
+#intro .introWrap .monkey {
+	position: absolute;
+	width: 85px;
+	height: 93px;
+	background-image: url(img/intro/monkey.png);
+	margin: 310px 0 0 50px; 
+	z-index: 200;
+}
+
+#intro .cloudWrap {
+	position: relative;
+	width: 100%;
+	height: 1050px; 
+}
+
+#intro .cloudWrap .leftCloud {
+	/*absolute를 사용한 이유 > float을 사용하면 좌우 배치는 가능하지만
+	 이미지보다 레이아웃이 작아지면 이미지 배치가 틀어짐 > 3차원 배치로 해준다.*/
+	position: absolute;
+	/*이미지의 크기는 5로 떨어지거나 짝수인 사이즈가 레이아웃잡기에 좋다.*/
+	width: 934px;
+	height: 816px;
+	background-image: url(img/intro/cloud1.png);
+	left: 0;
+	z-index: 2;
+}
+
+#intro .cloudWrap .rightCloud {
+	position: absolute;
+	width: 843px;
+	height: 858px;
+	background-image: url(img/intro/cloud2.png);
+	right: 0;
+}
+
+#intro .cloudWrap .dragonfly {
+	position: absolute;
+	width: 366px;
+	height: 228px;
+	background-image: url(img/intro/dragonfly.png);
+	/*.cloudWrap기준으로 800px 내림*/
+	top: 800px;
+}
+
+/*농부*/ 
+#farm1 {
+	position: relative;
+	width: 100%;
+	height: 800px;
+	background-image: url(img/farm/farm1/farm1_bg.png);
+} 
+
+#farm1 .leftRice1 {
+	position: absolute;
+	width: 390px;
+	height: 670px;
+	background-image: url(img/farm/farm1/leftrice.png);
+	left: 0;
+}
+ 
+#farm1 .rightRice1 {
+	position: absolute;
+	width: 335px;
+	height: 570px;
+	background-image: url(img/farm/farm1/rightrice.png);
+	right: 0;
+	top: 100px;
+}
+
+#farm1 .farmer {
+	position: absolute;
+	width: 747px;
+	height: 1078px;
+	background-image: url(img/farm/farm1/farmer.png);
+	left: 50%;
+	margin-left: -310px;
+}
+
+#farm1 .farmSpeechWrap {
+	/*제일 마지막에 작성된 2/3차원 속성인 relative이기때문에 레이어 제일 위에 위치한다.*/
+	position: relative;
+	top: 250px;
+	left: 150px;
+}
+
+/*기계*/
+#farm2 {
+	position: relative;
+	width: 100%;
+	height: 850px;
+	background-image: url(img/farm/farm2/farm2_bg.png);
+}
+
+#farm2 .leftRice2 {
+	float: left;
+	width: 250px;
+	height: 850px;
+	background-image: url(img/farm/farm2/leftrice2.png);
+}
+
+#farm2 .rightRice2 {
+	float: right;
+	width: 236px;
+	height: 850px;
+	background-image: url(img/farm/farm2/rightrice2.png);
+}
+
+#farm2 .scarecrow {
+	position: absolute;
+	width: 103px;
+	height: 206px;
+	background-image: url(img/farm/farm2/scarecrow.png);
+	margin: 200px 0 0 300px;
+}
+
+#farm2 {
+	position: relative;
+	width: 100%;
+	height: 850px;
+	background-image: url(img/farm/farm2/farm2_bg.png);
+}
+
+#farm2 .leftRice2 {
+	float: left;
+	width: 250px;
+	height: 850px;
+	background-image: url(img/farm/farm2/leftrice2.png);
+}
+
+#farm2 .rightRice2 {
+	float: right;
+	width: 236px;
+	height: 850px;
+	background-image: url(img/farm/farm2/rightrice2.png);
+}
+
+#farm2 .scarecrow {
+	position: absolute;
+	width: 103px;
+	height: 206px;
+	background-image: url(img/farm/farm2/scarecrow.png);
+	margin: 200px 0 0 300px;
+}
+
+/*기계*/
+#farm3 {
+	position: relative; 
+	width: 100%;
+	height: 850px;
+	background-image: url(img/farm/farm3/farm3_bg.png);
+}
+
+#farm3 .farm3Window{
+	position: absolute; 
+	width: 247px;
+	height: 169px;
+	background-image: url(img/farm/farm3/window.png); 
+	margin: 100px 0 0 100px;
+}
+
+#farm3 .machineWrap {
+	position: relative; 
+	width: 600px;
+	height: 455px; 
+	left: 50%;
+	margin-left: -285px;
+	top: 150px;
+}
+
+#farm3 .machineWrap .machine1 {
+	position: absolute;
+	width: 586px;
+	height: 455px;
+	background-image: url(img/farm/farm3/machine1.png); 
+	z-index: 900;
+}
+
+#farm3 .machineWrap .sawShadow {
+	position: absolute; 
+	width: 95px;
+	height: 95px;
+	background-image: url(img/farm/farm3/sawshadow.png); 
+	margin: 145px 0 0 145px;
+}
+
+#farm3 .machineWrap .saw1,
+#farm3 .machineWrap .saw2 {
+	position: absolute;
+	width: 95px;
+	height: 95px;
+	background-image: url(img/farm/farm3/saw.png);
+}
+
+#farm3 .machineWrap .saw1 {
+	margin: 140px 0 0 140px;
+}
+
+#farm3 .machineWrap .saw2 {
+	margin: 140px 0 0 350px;
+}
+
+#farm3 .machineWrap .timer {
+	position: absolute; 
+	width: 103px;
+	height: 104px;
+	background-image: url(img/farm/farm3/second.png); 
+	margin: 125px 0 0 45px; 
+	z-index: 999;
+}
+
+#farm3 .machineWrap .machineBird {
+	position: absolute; 
+	width: 44px;
+	height: 49px;
+	background-image: url(img/farm/farm3/machinebird.png); 
+	margin: 220px 0 0 20px; 
+	z-index: 999;
+}
+
+#farm3 .farm3Bubble {
+	position: absolute; 
+	top: 350px;
+	right: 80px;
+}
