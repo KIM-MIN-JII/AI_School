@@ -114,3 +114,96 @@
         transform: rotate(0deg);
     }
 }
+
+/*forest*/
+
+.rabbit1 {
+    animation: spinRabbitOne 1000ms linear infinite alternate;
+}
+
+@keyframes spinRabbitOne  {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+.rabbit2 {
+    animation: spinRabbitTwo 1000ms linear infinite alternate;
+}
+
+@keyframes spinRabbitTwo  {
+    from {
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.machineLeft {
+    animation: moveLeft 1s linear infinite alternate;
+}
+
+@keyframes moveLeft {
+    from {left : 30px}
+    to {left: 0px;}
+}
+
+.machineRight {
+    animation: moveRight 1s linear infinite alternate;
+}
+
+@keyframes moveRight {
+    from {left : -30px}
+    to {left: 0px;}
+}
+
+.smallBird {
+    animation: spinSmallBird 1000ms linear infinite alternate;
+}
+
+@keyframes spinSmallBird {
+    from{transform: rotate(0deg);}
+    to {transform: rotate(10deg);}
+}
+
+.bigBird {
+    animation: spinBigBird 1000ms linear infinite alternate;
+}
+
+@keyframes spinBigBird{
+    from{transform: rotate(10deg);}
+    to {transform: rotate(0deg);}
+}
+
+.gly {
+    animation: spinGly 1500ms linear infinite alternate;
+}
+
+@keyframes spinGly {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(50deg); }
+}
+
+.water {
+    animation: spinWater 1500ms linear infinite alternate;
+}
+
+@keyframes spinWater {
+   from { transform: rotate(0deg); }
+    to { transform: rotate(-50deg); } 
+}
+
+.star1,
+.star2,
+.star3 {
+    animation: pulseStar 1s linear infinite alternate;
+}
+
+@keyframes pulseStar {
+    from { transform: scale(1); }
+    to { transform: scale(0.8); }
+}
