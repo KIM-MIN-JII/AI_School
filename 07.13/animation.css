@@ -207,3 +207,37 @@
     from { transform: scale(1); }
     to { transform: scale(0.8); }
 }
+
+
+.moon {
+    animation: moveMoon linear 10s infinite;
+}
+
+@keyframes moveMoon {
+    from { margin-left: -135px; }
+    to { margin-left: 110%; }
+}
+
+.sun {
+    animation: moveSun linear 10s 1500ms infinite;
+}
+
+@keyframes moveSun {
+    from { margin-left: -131px; }
+    to { margin-left: 110%; }
+}
+
+.bubble1 {
+    animation-name: bubble1;
+    animation-duration: 1000ms;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    transition-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: 0 0;
+}
+
+@keyframes bubble1 {
+    0% { transform: translate(0px, 0px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%); }
+    100% { transform: translate(-99px, -198px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%); }
+} 
