@@ -338,5 +338,197 @@
 	.star3 {
 		display: none;
 	}
-}
+
+    #night2 {
+        height: 620px;
+        background-image: url(img/mobile/oneday/night2/mobile_night2_bg.png);
+    }
+
+    .moon {
+        width: 40px;
+        height: 40px;
+        background-image: url(img/mobile/oneday/night2/mobile_moon.png);
+    }
+
+    .night2Bubble {
+        width: 127px;
+        left: 50%;
+        margin: 300px 0 0 -67px;
+    }
+
+    .rightMoonTree {
+        width: 70px;
+        height: 173px;
+        background-image: url(img/mobile/oneday/night2/mobile_moontree.png);
+        top: 70px;
+        bottom: initial;
+    }
+
+    #morning {
+        height: 720px;
+        background-image: url(img/mobile/oneday/morning/mobile_morning_bg.png);
+    }
+
+    .sun {
+        width: 33px;
+        height: 32px;
+        background-image: url(img/mobile/oneday/morning/mobile_sun.png);
+    }
+
+    .leftPine {
+        width: 42px;
+        height: 81px;
+        background-image: url(img/mobile/oneday/morning/mobile_leftpine.png);
+    }
+
+    .rightPine {
+        width: 77px;
+        height: 149px;
+        background-image: url(img/mobile/oneday/morning/mobile_rightpine.png);
+        top: 220px;
+    }
+
+    #kitchen {
+        height: 400px;
+        background-image: url(img/mobile/kitchen/mobile_kitchen_bg.png);
+    }
+
+    .leftPan {
+        width: 52px;
+        height: 78px;
+        background-image: url(img/mobile/kitchen/mobile_pan.png);
+    }
+
+    .rightPot {
+        width: 73x;
+        height: 38px;
+        background-image: url(img/mobile/kitchen/mobile_pot.png);
+    }
+
+    .steamWrap {
+        width: 300px;
+        height: 300px;
+        margin-left: -50px;
+        top: 0;
+    }
+
+    .steam {
+        width: 222px;
+        height: 184px;
+        background-image: url(img/mobile/kitchen/mobile_steam.png);
+        margin: 0 0 0 -140px;
+    }
+
+    .bubble1 {
+        display: none;
+    }
+
+    .kitchenBubble {
+        width: 143px;
+        height: 50%;
+        margin: -320px 0 0 -70px;
+    }
+
+    #color1 {
+        height: 500px;
+        background-image: url(img/mobile/color/color1/mobile_color1_bg.png);
+    }
+
+    .penguin {
+        display: none;
+    }
+
+    .color1Bubble {
+        position: relative;
+        float: initial;
+        width: 166px;
+        height: 56px;
+        left: 50%;
+        margin: 100px 0 0 -83px;
+    }
+
+    #color2 {
+        height: 400px;
+        background-image: url(img/mobile/color/color2/mobile_color2_bg.png);
+    }
+
+    .horse {
+        display: none;
+    }
+
+    .color2wrap {
+        width: 320px;
+        top: 0;
+        left: 50%;
+        margin-left: -160px;
+        text-align: center;
+    }
+
+    .color2Bubble {
+        width: 128px;
+    }
+
+    .btn-wrap {
+        width: 300px;
+        height: 60px;
+        margin-bottom: 0;
+    }
+
+    .red,
+    .yellow,
+    .blue {
+        width: 40px;
+        height: 56px;
+    }
+
+    .red {
+        background-image: url(img/mobile/color/color2/btn/mobile_btn_red.png);
+    }
+
+    .yellow {
+        background-image: url(img/mobile/color/color2/btn/mobile_btn_yellow.png);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .blue {
+        background-image: url(img/mobile/color/color2/btn/mobile_btn_blue.png);
+    }
+
+    .color2Comment {
+        color: #8e7577;
+        line-height: 15px;
+        font-size: 10px;
+    }
+
+    #color3 {
+        height: 430px;
+        background-image: url(img/mobile/color/color3/mobile_color3_bg.png);
+    }
+
+    .flag {
+        width: 320px;
+        height: 46px;
+        background-image: url(img/mobile/color/color3/mobile_flag.png);
+        margin-left: -160px;
+    }
+
+    .book {
+        width: 107px;
+        height: 46px;
+        background-image: url(img/mobile/color/color3/mobile_book.png);
+        margin-right: 20px;
+    }
+
+    .logo {
+        width: 225px;
+        margin-top: 100px;
+        margin-left: -112.5px;
+    }
+
+    .dice {
+        width: 62px;
+        height: 52px;
+        background-image: url(img/mobile/color/color3/mobile_dice.png);
+    }
 }
