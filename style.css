@@ -1,0 +1,299 @@
+/*모든 html 적용*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*body태그의 전체영역 확인 가능하기때문에 넣는게 좋다*/
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: sans-serif;
+    color: #585858;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+span {
+    display: block;
+}
+
+/*header*/
+#header {}
+
+#header h1 {
+    background-color: yellow;
+}
+
+#header h1 .logo {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 65px;
+}
+
+.logo img {
+    position: absolute;
+    top: 0;
+    margin-top: 23px;
+    left: 50%;
+    margin-left: -93px;
+}
+
+/*header가 nav까지 높이 인식 하게 하기위하여
+nav에 overflow : hidden 주면서 높이 부여함*/
+.buttons {
+    overflow: hidden;
+}
+
+/*li는 3차원(float)이기때문에 
+부모의 높이값 없다.(buttons/ul)*/
+.buttons li {
+    position: relative;
+    float: left;
+    width: 33.33%;
+    height: 65px;
+}
+
+.menu_button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.buttons li:nth-child(1) .menu_button {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.buttons li:nth-child(2) .menu_button {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.buttons li:nth-child(3) .menu_button {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu_button img {
+    position: relative;
+    height: 20px;
+    /*y축중앙정렬*/
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 1em = 16px */
+@media (min-width: 47em) {
+    #header {
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+    }
+
+    #header h1 {
+        width: 50%;
+    }
+
+    /*모바일버전에서는 터치화면을 넉넉하게 크게 잡아주고,
+	 pc버전에서는 의도치않은 클릭을 방지하기 위하여 범위를 좁힌다.*/
+    #header h1 .logo {
+        width: 280px;
+        height: 80px;
+    }
+
+    #header .logo img {
+        margin-top: 30px;
+    }
+
+    #header .buttons {
+        position: absolute;
+        width: 50%;
+        left: 50%;
+        top: 0;
+    }
+
+    #header .buttons li {
+        height: 80px;
+    }
+}
+
+/*main*/
+.main_content {}
+
+.product_group {}
+
+.product_group li {}
+
+.product_group li .product_group_link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 56.25%;
+    overflow: hidden;
+    border: 10px solid red;
+}
+
+.product_group_link article {}
+
+.product_group_link .link_txt {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    color: black;
+    font-size: 25px;
+}
+
+.product_group_link article img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 47em) {
+    .main_content {
+        padding-top: 80px;
+    }
+}
+
+@media (min-width: 60em) {
+    .main_content {
+        overflow: hidden;
+    }
+
+    .main_content li .product_group_link {
+        float: left;
+        width: 50%;
+        height: 28.125%;
+    }
+}
+
+/*footer*/
+#footer {
+    position: relative;
+    padding-bottom: 66px;
+}
+
+#footer .left_nav {
+    padding-top: 20px;
+    text-align: center;
+}
+
+#footer .left_nav li {
+    padding: 5px 0;
+}
+
+#footer .right_methods {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+#footer .right_methods li {
+    display: inline-block;
+    padding: 7px 4px;
+}
+
+.payment_icon {
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+}
+
+/*띄어쓰기 주의 / 
+.payment_icon .one : payment_icon부모 one자식
+.payment_icon.one : payment_icon중에서 one이라는 클래스명 갖고있음*/
+
+.payment_icon.one {
+    background-color: black;
+}
+
+.payment_icon.two {
+    background-color: red;
+}
+
+.payment_icon.three {
+    background-color: pink;
+}
+
+.payment_icon.four {
+    background-color: blue;
+}
+
+.payment_icon.five {
+    background-color: gray;
+}
+
+.to_top_button {
+    position: absolute;
+    display: block;
+    width: 66px;
+    height: 66px;
+    background-color: green;
+    bottom: 0;
+    left: 50%;
+    margin-left: -33px;
+}
+
+@media (min-width: 60em) {
+    #footer .left_nav {
+        float: left;
+        width: 50%;
+        padding-top: 32px;
+        padding-left: 40px;
+        text-align: left;
+    }
+    #footer .right_methods {
+    	float: right;
+    	width: 50%;
+    	margin: 0;
+    	padding-top: 32px;
+    	padding-right: 40px;
+    	text-align: right;
+    }
+
+    #footer .left_nav a {
+    	font-size: 14px;
+    	padding: 0 5px;
+    }
+
+    #footer .right_methods li {
+    	padding: 0 4px;
+    }
+
+    #footer ul, #footer li, #footer h3 {
+    	display: inline-block;
+    	vertical-align: middle;
+    } 
+    #footer h3 {
+    	padding-right: 10px;
+    }
+}
