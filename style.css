@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.container {
+    width: 1130px;
+    margin: 0 auto;
+}
+
+button {
+    border: none;
+}
+
+/*body*/
+/*header*/
+#main_header {
+    position: relative;
+    background: #fff;
+}
+
+/*search bar*/
+.search_area {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+    background: #fff;
+    border-bottom: 1px solid #e4e8eb;
+}
+
+.search_wrap {
+    position: relative;
+    /*inline요소로 인하여 생긴 공백 - flex로 처리*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+    width: 582px;
+    height: 52px;
+    border: 2px solid #19ce60;
+}
+
+.search_wrap input {
+    /*전체 크기 안에서 52px을 뺀 크기*/
+    width: calc(100% - 52px);
+    height: 100%;
+    padding: 13px 15px;
+    font-size: 22px;
+    border: none;
+}
+
+.search_wrap button {
+    width: 52px;
+    height: 100%;
+    background-color: #19ce60;
+}
+
+/*navigation*/
+#navbar {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+#navbar ul {
+    padding: 11px 0;
+}
+
+#navbar ul li {
+    /*inline-block의 공백이 신경쓰일 경우 flex를 사용하여도 좋다*/
+    display: inline-block;
+    margin-right: 5px;
+}
+
+#navbar ul li a {
+    font-size: 15px;
+    font-weight: 700;
+    color: #03c75a;
+}
+
+/*main*/
+
+main {
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+/*main_left*/
+#main_left {
+    float: left;
+    width: 750px;  
+}
+
+/*main_news*/
+#banner_wrap {
+    width: 750px;
+    height: 135px;
+    background-color: #000;
+    margin-bottom: 12px;
+}
+
+.news_header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 0 16px 0;
+}
+
+.news_header h2 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.news_header .news_btn_wrap {
+    width: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news_header .news_btn_wrap button {
+    width: 15px;
+    height: 15px;
+    background-color: blueviolet;
+}
+
+.news_lists {
+    overflow: hidden;
+    border: 1px solid #dae1e6;
+}
+
+.news_list {
+    position: relative;
+    text-align: center;
+    width: 16.66%;
+    height: 65px;
+    background-color: #fff;
+    float: left;
+    border-bottom: 1px solid #e4e8eb;
+    border-right: 1px solid #e4e8eb;
+}
+
+.news_list:nth-child(6n) {
+    border-right: none;
+}
+
+.news_list:nth-child(19),
+.news_list:nth-child(20),
+.news_list:nth-child(21),
+.news_list:nth-child(22),
+.news_list:nth-child(23),
+.news_list:nth-child(24) {
+    border-bottom: none;
+}
+
+.news_list img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*main_blog*/
+#blog_wrap {
+    padding-top: 35px;
+}
+
+.blog_header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 17px;
+}
+
+.left_header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.left_header h3 {
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.left_header span {
+    font-size: 12px;
+    color: gray;
+}
+
+.right_header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.right_header span {
+    font-size: 12px;
+    color: gray;
+}
+
+.right_header span strong {
+    color: #000;
+}
+
+/*main_blog_nav*/
+.blog_nav ul {
+    overflow: hidden;
+    border: solid 1px #eae1e6;
+}
+
+.blog_nav ul li {
+    float: left;
+    width: 12.5%;
+    height: 49px;
+    border-right: solid 1px #eae1e6;
+}
+
+.blog_nav ul li:last-child {
+    border-right: none;
+}
+
+.blog_nav ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 49px;
+    text-align: center;
+}
+
+/*main_blog_list*/
+.blog_list_wrap {
+    padding-top: 18px;
+    border-bottom: solid 1px #dae1e6;
+}
+
+.blog_list_wrap li {
+    margin-bottom: 18px;
+}
+
+.blog_list_wrap li a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.blog_list_wrap li a img {
+    width: 170px;
+    height: 114px;
+    margin-right: 21px;
+}
+
+.blog_list_info {
+    width: 559px;
+    padding-right: 47px;
+}
+
+.blog_list_info span {
+    font-size: 12px;
+    color: #35ae5e;
+}
+
+.blog_list_info h4 {
+    font-size: 13px;
+}
+
+.blog_list_info p {
+    font-size: 13px;
+}
+
+.date_wrap span {
+    color: #505050;
+}
+
+/*blog_media*/
+.blog_media_wrap {}
+
+.blog_media_wrap ul {
+	display: flex; 
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center; 
+	padding: 18px 0;
+	border-bottom: solid 1px #dae1e6;
+}
+
+.blog_media_wrap ul li {}
+
+.blog_media_wrap ul li img {}
+
+.blog_media_info {
+	padding-top: 12px;
+}
+
+.blog_media_info h4 {
+	font-size: 13px;
+}
+
+.blog_media_info span {
+	font-size: 12px;
+}
+
+/*main_right*/
+#main_right {
+    float: right;
+    width: 350px;
+    height: 2000px;
+    background-color: gray;
+}
