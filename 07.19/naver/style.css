@@ -298,9 +298,7 @@ main {
     color: #505050;
 }
 
-/*blog_media*/
-.blog_media_wrap {}
-
+/*blog_media*/ 
 .blog_media_wrap ul {
 	display: flex; 
 	flex-wrap: wrap;
@@ -309,11 +307,7 @@ main {
 	padding: 18px 0;
 	border-bottom: solid 1px #dae1e6;
 }
-
-.blog_media_wrap ul li {}
-
-.blog_media_wrap ul li img {}
-
+ 
 .blog_media_info {
 	padding-top: 12px;
 }
@@ -325,11 +319,213 @@ main {
 .blog_media_info span {
 	font-size: 12px;
 }
-
+  
 /*main_right*/
 #main_right {
     float: right;
     width: 350px;
-    height: 2000px;
-    background-color: gray;
+}
+
+/*account*/
+#account {
+    width: 100%;
+    border: solid 1px #dae1e6;
+    padding: 16px 16px 12px 16px;
+    margin-bottom: 12px;
+}
+
+#account p {
+    font-size: 12px;
+    padding-left: 3px;
+    margin-bottom: 11px;
+}
+
+#account a {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    margin-bottom: 14px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    background-color: #19ce60;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.account_sub {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.account_sub span {
+    font-size: 12px;
+}
+
+#main_right_banner {
+    width: 348px;
+    height: 198px;
+    background-color: #000;
+    margin-bottom: 20px;
+}
+
+/*main_right_shop*/
+#shop_wrap {}
+
+.shop_title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.shop_title h3,
+.shop_title h4 {
+    font-size: 13px;
+}
+
+.shop_title_right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.shop_title_right h4 {
+    margin-left: 15px;
+}
+ 
+.shop_content {
+    border: solid 1px #e4e8eb;
+    padding: 0 0 22px;
+}
+
+.shop_goods {
+    padding: 55px 8px;
+}
+
+/*float: left & display : flex 상황에 따라서 다르게*/
+.commerce_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 4px;
+    background-color: #f7f9fa;
+    border-bottom: solid 1px #dae1e6;
+}
+
+.commerce_list li {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.commerce_list li:nth-child(1),
+.commerce_list li:nth-child(9) {
+    margin-left: 0;
+}
+ 
+.product_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.product_list li {
+    margin-bottom: 10px;
+}
+ 
+.product_info {
+    text-align: center;
+}
+
+.product_info h3,
+.product_info span {
+    font-size: 12px;
+}
+ 
+/*footer*/
+#main_footer {
+    position: relative;
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 92px;
+    background-color: #fafbfc;
+    border-top: solid 1px #e4e8eb;
+}
+
+.footer_news_list {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+}
+
+.footer_news_list li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.footer_news_list li img {
+    margin-right: 15px;
+}
+
+.footer_news_info {
+    overflow: hidden;
+    width: 172px;
+    vertical-align: middle;
+    padding-top: 5px;
+}
+
+.footer_news_info span,
+.footer_news_info h3,
+.footer_news_info p {
+    font-size: 13px;
+}
+
+.footer_news_info span {
+    color: #58c464;
+}
+
+#main_footer .corp_list {
+    padding-top: 25px;
+    border-top: solid 1px #e4e8eb;
+}
+
+#main_footer .corp_list li {
+    display: inline-block;
+    vertical-align: middle; 
+}
+
+#main_footer .corp_list li:before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin: 0 8px;
+    background-color: #e4e8eb;
+    vertical-align: -1px;
+}
+
+/*#main_footer .corp_list li:first-child:before {
+    display: none;
+}*/
+
+#main_footer .corp_list li:first-child:before {
+    content: initial;
+}
+
+#main_footer .corp_list li a { 
+    font-size: 12px;
 }
