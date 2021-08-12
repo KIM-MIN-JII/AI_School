@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.container {
+    width: 1130px;
+    margin: 0 auto;
+}
+
+button {
+    border: none;
+}
+
+/*NAVER_GAME*/
+.esports_container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.esports_flex_between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.esports_flex_start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.esports_flex_end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.esports_flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*header*/
+#esports_header {
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    background-color: #151618;
+    left: 0;
+    top: 0;
+}
+
+#esports_nav a {
+    color: #fff;
+}
+
+.nav_wrap {
+    height: 60px;
+}
+
+.nav_wrap .left h1 {
+    font-size: 20px;
+}
+
+.nav_wrap .left ul {}
+
+.nav_wrap .left li:before {
+    display: inline-block;
+    content: '';
+    width: 1px;
+    height: 14px;
+    background-color: rgba(160, 165, 182, .3);
+    margin: 0 6px;
+}
+
+.nav_wrap .left a {
+    color: gray;
+}
+
+.nav_wrap .center li {
+    margin-right: 24px;
+}
+
+.nav_wrap .center li:last-child {
+    margin-right: 0;
+}
+
+.nav_wrap .center li a {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    font-size: 17px;
+    border-bottom: 5px solid transparent;
+    color: gray;
+}
+
+.nav_wrap .center li a:hover {
+    color: darkgrey;
+}
+
+.nav_wrap .center li a.active {
+    color: #fff;
+    border-bottom: 5px solid #fff;
+}
+
+.nav_wrap .right a {
+    border: 1px solid hsla(0, 0%, 80%, .3);
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+/*main*/
+#esports_main {
+    padding-top: 61px;
+}
+
+#esports_main_top {
+    background-color: #151618;
+}
+
+#esports_main_top .timeline_wrap {
+    padding: 20px 0;
+}
+ 
+.timeline_wrap li {
+    width: 16.66%;
+    background-color: #272b31;
+    border: 1px solid #151618;
+}
+
+.timeline_wrap li:first-child { 
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.timeline_wrap li:last-child { 
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.timeline_wrap a {
+    display: block;
+    width: 100%;
+    padding: 14px 18px;
+    color: #fff;
+}
+ 
+.timeline_wrap a h2 {
+    font-size: 13px;
+    margin-top: 6px;
+    color: a0a5b6;
+}
+
+.timeline_wrap a .status_wrap {
+    margin-top: 35px;
+}
+
+.status_wrap .live {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.status_wrap .status {
+    font-size: 12px;
+    font-weight: 500;
+    color: red;
+}
+
+/*live_wrap*/
+.live_wrap {}
+.live_wrap h2 {
+    font-size: 18px;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.live_wrap .count {
+    color: #8a7cff;
+}
+
+.live_wrap ul {
+    padding-bottom: 70px;
+}
+
+.live_wrap li {
+    width: 625px;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #1f2227;
+}
+
+.live_wrap .live_img {
+    width: 442px;
+    height: 250px;
+    background-color: gray;
+}
+
+.live_wrap .txt_wrap {
+    width: 183px;
+    height: 250px;
+    padding: 20px;
+}
+
+.live_wrap .txt_wrap span{
+    color: red;
+    font-size: 11px;
+    background-color: rgba(255, 0, 0, 0.2);
+    border-radius: 3px;
+    padding: 3px 7px;
+}
+.live_wrap .txt_wrap h3{
+    font-size: 15px;
+    color: #fff;
+    margin-top: 8px;
+}
