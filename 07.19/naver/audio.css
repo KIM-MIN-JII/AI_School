@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+button {
+    border: none;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.audio_container {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.audio_flex_between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.audio_flex_start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.audio_flex_end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.audio_flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*audio_clip*/
+#audio_header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #efeff4;
+    left: 0;
+    top: 0;
+    padding-top: 20px;
+    z-index: 99999;
+}
+
+.audio_nav {}
+
+.audio_nav_left {
+    width: 660px;
+}
+
+.audio_logo {}
+
+.audio_logo a {}
+
+.audio_nav_left ul {}
+
+.audio_nav_left li {}
+
+.audio_nav_left li a {
+    display: block;
+    font-size: 17px;
+    padding: 12px 13px 17px 12px;
+}
+
+.audio_nav_left li a.active {
+    font-weight: 700;
+}
+
+.audio_nav_left li a span {
+    position: relative;
+    display: inline-block;
+    height: 21px;
+}
+
+.audio_nav_left li a.active span:after {
+    display: block;
+    position: absolute;
+    left: -4.5px;
+    right: -5.5px;
+    bottom: -20px;
+    content: '';
+    border-bottom: 3px solid #222;
+    border-radius: 1.5px;
+    z-index: 1; 
+}
+
+.audio_nav_right {
+    width: 330px;
+}
+
+.audio_nav_right .search_wrap {
+    width: 180px;
+    height: 40px;
+    border: 2px solid rgba(0, 86, 201, 0.2);
+    border-radius: 4px;
+}
+
+.audio_nav_right .search_wrap i {
+    width: 40px;
+    height: 100%;
+    background-color: skyblue;
+}
+
+.audio_nav_right .search_wrap input {
+    width: calc(100% - 40px);
+    height: 100%;
+    padding: 8px 15px;
+    font-size: 15px;
+    border: none;
+}
+
+.audio_nav_right .profile_wrap {}
+
+.audio_nav_right .audio_profile_img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.audio_nav_right .profile_wrap .btn_login {
+    font-size: 15px;
+    padding-left: 8px;
+}
